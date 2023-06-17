@@ -1,0 +1,30 @@
+/* color: #ff6680
+color:#903fa6
+button:#028ba7
+background-color:#e7fcfe */
+.container-md {
+  max-width: 100%;
+  font-family: "Mulish", sans-serif;
+  padding: 20px 10px 20px 10px;
+}
+.searchResult {
+  padding-top: 14px;
+  line-height: 40px;
+}
+.container-md {
+  background-color: #e7fcfe;
+  border: 2px solid #c9f8fd;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px rgb(0, 0, 0, 40%);
+}
+.col-auto .btn {
+  /* background-color: #0a0a0a; */
+  border: 1px solid #046671;
+  border-radius: 4px;
+}
+.container-md .enterCity {
+  font-size: large;
+}
+.col-auto .btn:hover {
+  transition: ;
+}
