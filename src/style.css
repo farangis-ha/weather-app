@@ -19,8 +19,12 @@ background-color:#e7fcfe */
 }
 .col-auto .btn {
   /* background-color: #0a0a0a; */
+  margin: 10px;
   border: 1px solid #046671;
   border-radius: 4px;
+}
+.col-4 .form-control {
+  margin-top: 10px;
 }
 .container-md .enterCity {
   font-size: large;
