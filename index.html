@@ -20,6 +20,7 @@
     />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <div class="container-md">
       <h1><b>Search Weather</b></h1>
       <div class="row">
@@ -38,12 +39,11 @@
           </div>
         </form>
       </div>
-
       <div class="container searchResult">
         <div id="enter-city">City</div>
         <div id="city-time">Time</div>
         <div class="row">
-          <div class="col-4">Variable width content</div>
+          <div class="col-4" id="temp">22 °C</div>
           <div class="col-lg-auto">
             <div class="row">Humidity</div>
             <div class="row">Wind</div>
