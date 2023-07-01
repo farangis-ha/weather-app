@@ -40,9 +40,13 @@ function cityTempreture(response) {
   windspeed = response.data.currentConditions.windspeed;
   humidity = response.data.currentConditions.humidity;
   let temp = document.querySelector("#temp");
-  temp.innerHTML = `Temprture= ${temprture} °C`;
-  document.querySelector("#Humidity").innerHTML = `Humidity= ${humidity}`;
-  document.querySelector("#Wind").innerHTML = `Wind Speed= ${windspeed}`;
+  temp.innerHTML = `Temprture= ${Math.round(temprture)} °C`;
+  document.querySelector("#Humidity").innerHTML = `Humidity= ${Math.round(
+    humidity
+  )}%`;
+  document.querySelector("#Wind").innerHTML = `Wind Speed= ${Math.round(
+    windspeed
+  )}`;
 }
 function geo() {
   // event.preventDefault();
