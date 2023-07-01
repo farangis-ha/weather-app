@@ -46,7 +46,7 @@ function cityTempreture(response) {
   )}%`;
   document.querySelector("#Wind").innerHTML = `Wind Speed= ${Math.round(
     windspeed
-  )}`;
+  )} km/h`;
 }
 function geo() {
   // event.preventDefault();
