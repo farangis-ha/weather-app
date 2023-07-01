@@ -6,8 +6,9 @@ background-color:#e7fcfe */
   max-width: 100%;
   font-family: "Mulish", sans-serif;
   padding: 20px 10px 20px 10px;
+  color: #046671;
 }
-.searchResult {
+.search-result {
   padding-top: 14px;
   line-height: 40px;
 }
@@ -26,6 +27,13 @@ background-color:#e7fcfe */
 .col-4 .form-control {
   margin-top: 10px;
 }
-.container-md .enterCity {
-  font-size: large;
+#enter-city {
+  font-size: 30px;
+}
+#temp {
+  font-size: 60px;
+}
+.weather-app {
+  position: inherit;
+  text-align: center;
 }
