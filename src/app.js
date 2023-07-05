@@ -40,7 +40,7 @@ function cityTempreture(response) {
   windspeed = response.data.currentConditions.windspeed;
   humidity = response.data.currentConditions.humidity;
   let temp = document.querySelector("#temp");
-  temp.innerHTML = `${Math.round(temprture)} °C`;
+  temp.innerHTML = `${Math.round(temprture)}`;
   document.querySelector("#Humidity").innerHTML = `Humidity= ${Math.round(
     humidity
   )}%`;
