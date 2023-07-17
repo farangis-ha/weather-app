@@ -31,7 +31,14 @@ background-color:#e7fcfe */
   font-size: 30px;
 }
 #temp {
+  vertical-align: sub;
+  /* vertical-align: text-top; */
   font-size: 60px;
+}
+.container .searchResult .col-4 image {
+  border: 1px solid #046671;
+
+  vertical-align: super;
 }
 .weather-app {
   position: inherit;

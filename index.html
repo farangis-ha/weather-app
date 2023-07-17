@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mulish:ital@1&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/cae3df48c7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
@@ -45,16 +49,12 @@
         <div id="city-time">Time</div>
         <div class="row">
           <div class="col-4">
-            <img
-              src="img/img.png"
-              alt="weather app"
-              width="20px"
-              height="20px"
-              vertical-align="super"
-            />
-            <span id="temp">22</span> °C
+            <img id="icons" />
+            <span id="temp">22° </span><span id="cilicius">C</span> |
+            <span id="farenhite"></span> F
           </div>
           <div class="col-lg-auto">
+            <div class="row" id="Condition" style="font-size: larger"></div>
             <div class="row" id="Humidity">Humidity</div>
             <div class="row" id="Wind">Wind Speed</div>
           </div>

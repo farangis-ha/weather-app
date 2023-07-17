@@ -39,14 +39,26 @@ function cityTempreture(response) {
   temprture = response.data.currentConditions.temp;
   windspeed = response.data.currentConditions.windspeed;
   humidity = response.data.currentConditions.humidity;
+  condition = response.data.currentConditions.conditions;
+  //Enter amount
   let temp = document.querySelector("#temp");
-  temp.innerHTML = `${Math.round(temprture)}`;
+  temp.innerHTML = `${Math.round(temprture)}°`;
   document.querySelector("#Humidity").innerHTML = `Humidity= ${Math.round(
     humidity
   )}%`;
   document.querySelector("#Wind").innerHTML = `Wind Speed= ${Math.round(
     windspeed
   )} km/h`;
+  document.querySelector("#Condition").innerHTML = `${condition}`;
+  weatherIcon(condition);
+}
+weatherIcon(condition);
+{
+  if (condition == clear) {
+    document.querySelector("#icons").innerHTML = (
+      <font-awesome-icon icon="fa-regular fa-clouds" />
+    );
+  }
 }
 function geo() {
   // event.preventDefault();
