@@ -50,16 +50,14 @@ function cityTempreture(response) {
     windspeed
   )} km/h`;
   document.querySelector("#Condition").innerHTML = `${condition}`;
-  weatherIcon(condition);
-}
-weatherIcon(condition);
-{
-  if (condition == clear) {
-    document.querySelector("#icons").innerHTML = (
-      <font-awesome-icon icon="fa-regular fa-clouds" />
-    );
+  //Weather Icon
+  if (condition === clear) {
+    var icon = document.createElement("i");
+    icon.setAttribute("class", "fa-regular fa-clouds");
+    document.querySelector("#icons").appendChild(icon);
   }
 }
+
 function geo() {
   // event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentTempreture);
