@@ -4,7 +4,15 @@ let apiUrl;
 let today;
 
 function setTime() {
-  let days = ["sun", "Mon", "Tue", "Wed", "Thu", "Fri", "sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[now.getDay()];
   let hour = now.getHours();
   let min = now.getMinutes();
@@ -51,13 +59,14 @@ function cityTempreture(response) {
   )} km/h`;
   document.querySelector("#Condition").innerHTML = `${condition}`;
   //Weather Icon
+  const iconWeather = document.querySelector("#icons");
   if (condition === clear) {
-    var icon = document.createElement("i");
-    icon.setAttribute("class", "fa-regular fa-clouds");
-    document.querySelector("#icons").appendChild(icon);
+    iconElement.classList.add("fa", "fa-check");
+  }
+  if (condition === Overcast) {
+    iconElement.classList.add("fa", "fa-regular fa-clouds");
   }
 }
-
 function geo() {
   // event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentTempreture);
