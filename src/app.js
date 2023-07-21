@@ -59,12 +59,19 @@ function cityTempreture(response) {
   )} km/h`;
   document.querySelector("#Condition").innerHTML = `${condition}`;
   //Weather Icon
-  const iconWeather = document.querySelector("#icons");
-  if (condition === clear) {
+  console.log(condition);
+  let iconWeather = document.querySelector("#icons");
+  if (condition === "clear") {
     iconElement.classList.add("fa", "fa-check");
   }
-  if (condition === Overcast) {
+  if (condition === "Overcast") {
     iconElement.classList.add("fa", "fa-regular fa-clouds");
+  }
+  if (condition === "Partially cloudy") {
+    alert("hiii");
+    // iconElement.classList.add("fa", "fa-check");
+  } else {
+    alert("hi");
   }
 }
 function geo() {
@@ -79,7 +86,6 @@ function currentTempreture(position) {
   alert(apiUrl);
   axios.get(apiUrl).then(cityTempreture);
 }
-
 // Search City
 let searchfield = document.querySelector("#search");
 searchfield.addEventListener("click", showCity);
