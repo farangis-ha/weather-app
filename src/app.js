@@ -62,7 +62,7 @@ function cityTempreture(response) {
   console.log(condition);
   let iconWeather = document.querySelector("#icons");
   if (condition === "clear") {
-    iconElement.classList.add("fa", "fa-check");
+    iconWeather.innerHTML = <img searchCity></img>;
   }
   if (condition === "Overcast") {
     iconElement.classList.add("fa", "fa-regular fa-clouds");
