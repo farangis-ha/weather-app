@@ -35,7 +35,7 @@ function setTime() {
 // Show City
 function showCity(event) {
   event.preventDefault();
-  let searchValue = document.querySelector('[placeholder="Search"]');
+  let searchValue = document.querySelector('[placeholder="Enter City Name"]');
   let searchCity = searchValue.value;
   let city = document.querySelector("#enter-city");
   city.innerHTML = searchCity;
@@ -113,7 +113,7 @@ searchfield.addEventListener("click", showCity);
 //Date + Time
 let now = new Date();
 let dateIn = document.querySelector("#city-time");
-dateIn.innerHTML = setTime(now);
+dateIn.innerHTML = `Last updated on ${setTime(now)}`;
 // Current Wheather
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", geo);

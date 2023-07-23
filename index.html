@@ -26,7 +26,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
-    <div class="container-md">
+    <div class="container-sm style-container">
       <h1><b>Search Weather</b></h1>
       <div class="row">
         <form class="d-flex searchPart" role="search">
@@ -34,13 +34,15 @@
             <input
               class="form-control"
               type="search"
-              placeholder="Search"
+              placeholder="Enter City Name"
               aria-label="Search"
             />
           </div>
           <div class="col-auto">
-            <button class="btn" type="submit" id="search">Search City</button>
-            <button class="btn" type="submit" id="current">Current City</button>
+            <button class="serach-button" type="submit" id="search">
+              Search City
+            </button>
+            <!-- <button class="btn" type="submit" id="current">Current City</button> -->
           </div>
         </form>
       </div>
@@ -49,12 +51,14 @@
         <div id="city-time">Time</div>
         <div class="row">
           <div class="col-4">
-            <i id="icons" style="height: 70px; width: 70px; margin: 5px"></i>
-            <span id="temp">22° </span><span id="cilicius">C</span> |
-            <span id="farenhite"></span> F
+            <i class="fas fa-sun fa-2x" id="icons" style="margin: 5px"></i>
+            <span id="temp">27° </span><strong id="cilicius">C</strong>
+            <!-- <span id="farenhite"></span> F -->
           </div>
           <div class="col-lg-auto">
-            <div class="row" id="Condition" style="font-size: larger"></div>
+            <div class="row" id="Condition" style="font-size: larger">
+              Condition
+            </div>
             <div class="row" id="Humidity">Humidity</div>
             <div class="row" id="Wind">Wind Speed</div>
           </div>

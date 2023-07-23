@@ -1,29 +1,25 @@
-/* color: #ff6680
-color:#903fa6
-button:#028ba7
-background-color:#e7fcfe */
-
-.container-md {
-  max-width: 100%;
+.style-container {
+  margin: 50px;
   font-family: "Mulish", sans-serif;
-  padding: 20px 10px 20px 10px;
-  color: #046671;
-}
-.search-result {
-  padding-top: 14px;
-  line-height: 40px;
-}
-.container-md {
-  background-color: #e7fcfe;
-  border: 2px solid #c9f8fd;
+  padding: 50px;
+  color: #313e61;
+  background-color: #f7d8d9;
+  border: 2px solid #774a62;
   border-radius: 6px;
   box-shadow: 3px 3px 6px rgb(0, 0, 0, 40%);
 }
-.col-auto .btn {
-  /* background-color: #0a0a0a; */
+.search-result {
+  padding-top: 20px;
+  line-height: 40px;
+}
+
+.col-auto .serach-button {
   margin: 10px;
-  border: 1px solid #046671;
+  padding: 6px 15px;
+  border: 1px solid wheat;
   border-radius: 4px;
+  background-color: #774a62;
+  color: white;
 }
 .col-4 .form-control {
   margin-top: 10px;
@@ -35,11 +31,6 @@ background-color:#e7fcfe */
   vertical-align: sub;
   /* vertical-align: text-top; */
   font-size: 60px;
-}
-.container .searchResult .col-4 image {
-  border: 1px solid #046671;
-
-  vertical-align: super;
 }
 .weather-app {
   position: inherit;
