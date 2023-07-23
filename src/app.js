@@ -69,7 +69,6 @@ function cityTempreture(response) {
     // Append the <i> element to the element with ID "icons".
     iconWeather.appendChild(iconElement);
   } else if (condition === "Overcast") {
-    alert("hii");
     const iconElement = document.createElement("i");
     iconElement.classList.add("fas", "fa-cloud", "fa-2x");
     // Append the <i> element to the element with ID "icons".
