@@ -58,20 +58,43 @@ function cityTempreture(response) {
     windspeed
   )} km/h`;
   document.querySelector("#Condition").innerHTML = `${condition}`;
+
   //Weather Icon
   console.log(condition);
   let iconWeather = document.querySelector("#icons");
-  if (condition === "clear") {
-    iconWeather.innerHTML = <img searchCity></img>;
+  iconWeather.innerHTML = "";
+  if (condition === "Clear") {
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fas", "fa-sun", "fa-2x");
+    // Append the <i> element to the element with ID "icons".
+    iconWeather.appendChild(iconElement);
+  } else if (condition === "Overcast") {
+    alert("hii");
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fas", "fa-cloud", "fa-2x");
+    // Append the <i> element to the element with ID "icons".
+    iconWeather.appendChild(iconElement);
+  } else if (condition === "Partially cloudy") {
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fas", "fa-cloud-sun", "fa-2x");
+    // Append the <i> element to the element with ID "icons".
+    iconWeather.appendChild(iconElement);
   }
-  if (condition === "Overcast") {
-    iconElement.classList.add("fa", "fa-regular fa-clouds");
+  if (condition.includes("Rain")) {
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fas", "fa-cloud-rain", "fa-2x");
+
+    iconWeather.appendChild(iconElement);
   }
-  if (condition === "Partially cloudy") {
-    alert("hiii");
-    // iconElement.classList.add("fa", "fa-check");
-  } else {
-    alert("hi");
+  if (condition.includes("Snow")) {
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fas", "fa-snowflake", "fa-2x");
+    iconWeather.appendChild(iconElement);
+  }
+  if (condition.includes("Wind")) {
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fas", "fa-wind", "fa-2x");
+    iconWeather.appendChild(iconElement);
   }
 }
 function geo() {
@@ -79,7 +102,6 @@ function geo() {
   navigator.geolocation.getCurrentPosition(currentTempreture);
 }
 function currentTempreture(position) {
-  alert("hiiii");
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
   apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${long}/today?unitGroup=metric&include=current&key=${apiKey}&contentType=json`;
